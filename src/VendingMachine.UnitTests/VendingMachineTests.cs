@@ -156,7 +156,7 @@ namespace VendingMachine.UnitTests
             // Assert
             Assert.AreEqual(result != null, true);
             Assert.AreEqual(result.IsSuccess, false);
-            Assert.AreEqual(result.Message, "Insert Coin");
+            Assert.AreEqual(result.Message, "INSERT COIN");
         }
 
         [TestMethod]
@@ -211,7 +211,7 @@ namespace VendingMachine.UnitTests
             // Assert
             Assert.AreEqual(result != null, true);
             Assert.AreEqual(result.IsSuccess, true);
-            Assert.AreEqual(result.Message, "Thank You");
+            Assert.AreEqual(result.Message, "THANK YOU");
         }
 
         [TestMethod]
@@ -234,7 +234,7 @@ namespace VendingMachine.UnitTests
             // Assert
             Assert.AreEqual(result != null, true);
             Assert.AreEqual(result.IsSuccess, true);
-            Assert.AreEqual(result.Message, "Thank You");
+            Assert.AreEqual(result.Message, "THANK YOU");
             Assert.AreEqual(result.Change != null, true);
             Assert.AreEqual(result.Change.SingleOrDefault(item => item.Type == CoinType.FivePence).Number, 1);
             Assert.AreEqual(result.Change.SingleOrDefault(item => item.Type == CoinType.TwentyPence) == null, true);
@@ -263,7 +263,7 @@ namespace VendingMachine.UnitTests
             // Assert
             Assert.AreEqual(result != null, true);
             Assert.AreEqual(result.IsSuccess, true);
-            Assert.AreEqual(result.Message, "Thank You");
+            Assert.AreEqual(result.Message, "THANK YOU");
             Assert.AreEqual(result.Change != null, true);
             Assert.AreEqual(result.Change.SingleOrDefault(item => item.Type == CoinType.FivePence).Number, 1);
             Assert.AreEqual(result.Change.SingleOrDefault(item => item.Type == CoinType.TwentyPence).Number, 1);

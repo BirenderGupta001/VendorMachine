@@ -35,7 +35,7 @@ namespace VendingMachine
             //not a valid coin
             if (currentCoin == null)
             {
-                response.Message = "Insert Coin";
+                response.Message = "INSERT COIN";
                 response.IsRejectedCoin = true;
                 response.RejectedCoin = coin; //return rejected coin
                 return response;
@@ -71,7 +71,7 @@ namespace VendingMachine
             if (_cost == 0)
             {
                 //if exact change item, message = "exact change only"
-                response.Message = "Insert Coin";
+                response.Message = "INSERT COIN";
                 response.IsSuccess = false;
                 return response;
             }
@@ -88,7 +88,7 @@ namespace VendingMachine
             var quantity = _productService.GetProductQuantity(code);
             if (quantity > 0)
             {
-                response.Message = "Thank You";
+                response.Message = "THANK YOU";
                 response.IsSuccess = true;
                 _productService.UpdateProductQuantity(code);
                 response.Change = MakeChange(Convert.ToDouble(_cost - product.Price));
